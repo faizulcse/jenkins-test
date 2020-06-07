@@ -20,7 +20,7 @@ pipeline {
 		stage('Development Stage'){
 			steps {
 				withMaven(maven: 'maven_3_6_2'){
-					sh 'man deploy'
+					sh 'mvn deploy'
 				}
 			}
 			
