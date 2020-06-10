@@ -2,10 +2,10 @@ pipeline {
     def IMAGE
 
     agent {
-		label 'master'
-	}
+        label 'master'
+    }
 
-	stages {
+    stages {
         stage('checkout') {
             deleteDir()
             checkout scm
@@ -30,6 +30,6 @@ pipeline {
             sh "docker rmi -f ${IMAGE.id}"
             sh "docker rmi -f ${IMAGE.id}:0.1.${env.BUILD_NUMBER}"
             echo 'Successfully remove docker image.'
-		}
-	}
+        }
+    }
 }
