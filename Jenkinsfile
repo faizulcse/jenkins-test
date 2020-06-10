@@ -9,7 +9,7 @@ node('master') {
     }
 
     stage('docker:build') {
-        IMAGE = docker.build("ubuntuimage-faizul/${env.BRANCH_NAME}")
+        IMAGE = docker.build("myubuntu/ubuntu")
         echo 'Docker build successfully done!'
 
     }
