@@ -9,7 +9,7 @@ node('master') {
     }
 
     stage('docker:build') {
-        IMAGE = docker.build("myubuntu/ubuntu")
+        IMAGE = docker.build("rootnext/myubuntuimage")
         echo 'Docker build successfully done!'
 
     }
