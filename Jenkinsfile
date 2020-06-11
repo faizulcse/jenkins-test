@@ -9,7 +9,7 @@ node('master') {
     }
 
     stage('docker:build') {
-        IMAGE = docker.build("rootnext/myubuntuimage")
+        IMAGE = docker.build("rootnext/${env.BRANCH_NAME}")
         echo 'Docker build successfully done!'
 
     }
